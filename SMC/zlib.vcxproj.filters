@@ -124,16 +124,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="zlibvc.def">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="zlib.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <MASM Include="..\contrib\masmx64\gvmat64.asm">
       <Filter>Source Files</Filter>
     </MASM>
@@ -146,5 +136,15 @@
     <MASM Include="..\contrib\masmx86\match686.asm">
       <Filter>Source Files</Filter>
     </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\contrib\vstudio\vc11\zlib.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\contrib\vstudio\vc11\zlibvc.def">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
