@@ -181,3 +181,7 @@ $RECYCLE.BIN/
 /zlib.pc
 
 .DS_Store
+
+Makefile
+ztest*.exe
+ztest*.c
