@@ -168,7 +168,7 @@
       <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
@@ -190,10 +190,15 @@
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -203,7 +208,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <PreprocessorDefinitions>ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
@@ -220,10 +225,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -233,7 +243,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <PreprocessorDefinitions>WIN32;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
@@ -252,10 +262,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -265,7 +280,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <PreprocessorDefinitions>WIN32;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;ZLIB_WINAPI;ASMV;ASMINF;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
@@ -284,10 +299,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -308,7 +328,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
@@ -331,10 +351,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -355,7 +380,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
@@ -373,10 +398,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
@@ -397,7 +427,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
@@ -417,10 +447,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
@@ -441,7 +476,7 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
@@ -461,10 +496,15 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 copy ..\zlib.h $(OutputPath)\include
-copy ..\zconf.h $(OutputPath)\include
+copy .\zconf.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\zconf.h (
+del ..\zconf.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\adler32.c" />
@@ -531,6 +571,14 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</UseSafeExceptionHandlers>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">0</WarningLevel>
     </MASM>
     <MASM Include="..\contrib\masmx64\inffasx64.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -547,6 +595,14 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</UseSafeExceptionHandlers>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">0</WarningLevel>
     </MASM>
     <MASM Include="..\contrib\masmx86\inffas32.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -561,6 +617,22 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</UseSafeExceptionHandlers>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">0</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
     </MASM>
     <MASM Include="..\contrib\masmx86\match686.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -575,6 +647,22 @@ copy ..\README $(OutputPath)\licenses\zlib.txt</Command>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</UseSafeExceptionHandlers>
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">true</UseSafeExceptionHandlers>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">/coff %(AdditionalOptions)</AdditionalOptions>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">0</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">0</WarningLevel>
     </MASM>
   </ItemGroup>
   <ItemGroup>
