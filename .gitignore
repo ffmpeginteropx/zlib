@@ -185,3 +185,4 @@ $RECYCLE.BIN/
 Makefile
 ztest*.exe
 ztest*.c
+zconf.h
