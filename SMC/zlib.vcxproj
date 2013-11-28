@@ -113,42 +113,42 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libzd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libz</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>zlib</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc32\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>zlibd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libzd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libz</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>zlib</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
-    <OutDir>..\..\..\</OutDir>
+    <OutDir>..\..\..\msvc64\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>zlibd</TargetName>
   </PropertyGroup>
@@ -168,7 +168,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
@@ -180,9 +180,9 @@
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -209,15 +209,15 @@ del ..\zconf.h
     </Link>
     <Lib>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -241,20 +241,20 @@ del ..\zconf.h
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
       <SubSystem>Windows</SubSystem>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
-      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -278,20 +278,20 @@ del ..\zconf.h
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -329,7 +329,7 @@ del ..\zconf.h
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
@@ -341,9 +341,9 @@ del ..\zconf.h
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -382,15 +382,15 @@ del ..\zconf.h
     </Link>
     <Lib>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -426,20 +426,20 @@ del ..\zconf.h
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
       <SubSystem>Windows</SubSystem>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
-      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -475,20 +475,20 @@ del ..\zconf.h
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include\msvc
-copy ..\zlib.h $(OutDir)\include\msvc
-copy .\zconf.h $(OutDir)\include\msvc
+      <Command>mkdir $(OutDir)\include
+copy ..\zlib.h $(OutDir)\include
+copy .\zconf.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
