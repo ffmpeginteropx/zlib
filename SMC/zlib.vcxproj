@@ -293,6 +293,7 @@ del ..\zconf.h
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
@@ -585,6 +586,7 @@ del ..\zconf.h
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
