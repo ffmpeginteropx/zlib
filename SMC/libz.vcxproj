@@ -44,7 +44,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CA9A4A38-CC63-4BDB-8CFB-E058965DDA32}</ProjectGuid>
-    <RootNamespace>zlib</RootNamespace>
+    <RootNamespace>libz</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
