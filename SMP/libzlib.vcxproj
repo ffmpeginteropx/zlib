@@ -242,6 +242,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -276,6 +282,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -313,6 +325,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -349,6 +367,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -401,6 +425,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -453,6 +483,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -500,6 +536,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -547,6 +589,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -595,6 +643,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -642,6 +696,12 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     <PreBuildEvent>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
+)
+if exist $(OutDir)\include\zlib.h (
+del $(OutDir)\include\zlib.h
+)
+if exist $(OutDir)\include\zconf.h (
+del $(OutDir)\include\zconf.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
