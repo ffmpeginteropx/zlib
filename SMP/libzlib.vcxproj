@@ -759,6 +759,7 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <OutputFile>$(OutDir)\bin\x86\$(TargetName)$(TargetExt)</OutputFile>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
       <LargeAddressAware>true</LargeAddressAware>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
@@ -827,6 +828,7 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>..\contrib\vstudio\vc11\zlibvc.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <MASM>
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
