@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\asm_x64">
-      <UniqueIdentifier>{f2efda25-fefb-49f2-b55f-47ab54cf23fb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\asm_x86">
-      <UniqueIdentifier>{09911575-8bb4-4c74-a2dd-512326046c5c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\zlib">
       <UniqueIdentifier>{8dce421b-2476-4f42-83ac-f3866d35196d}</UniqueIdentifier>
     </Filter>
@@ -81,9 +75,6 @@
     <ClCompile Include="..\contrib\minizip\zip.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\contrib\masmx64\inffas8664.c">
-      <Filter>Source Files\asm_x64</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\zutil.h">
@@ -125,20 +116,6 @@
     <ClInclude Include="zconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <MASM Include="..\contrib\masmx86\inffas32.asm">
-      <Filter>Source Files\asm_x86</Filter>
-    </MASM>
-    <MASM Include="..\contrib\masmx86\match686.asm">
-      <Filter>Source Files\asm_x86</Filter>
-    </MASM>
-    <MASM Include="..\contrib\masmx64\gvmat64.asm">
-      <Filter>Source Files\asm_x64</Filter>
-    </MASM>
-    <MASM Include="..\contrib\masmx64\inffasx64.asm">
-      <Filter>Source Files\asm_x64</Filter>
-    </MASM>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\contrib\vstudio\vc11\zlib.rc">
