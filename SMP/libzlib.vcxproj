@@ -249,9 +249,9 @@
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -259,11 +259,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -271,11 +271,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -304,9 +304,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -314,11 +314,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -326,11 +326,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -363,9 +363,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -373,11 +373,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -385,11 +385,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -421,9 +421,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -431,11 +431,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -443,11 +443,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -490,9 +490,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -500,11 +500,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -512,11 +512,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -559,9 +559,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -569,11 +569,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -581,11 +581,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -623,9 +623,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -633,11 +633,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -645,11 +645,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -687,9 +687,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -697,11 +697,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -709,11 +709,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -754,9 +754,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -764,11 +764,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -776,11 +776,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
@@ -820,9 +820,9 @@ del /f /q $(OutDir)\licenses\zlib.txt
       <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
     </MASM>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\zlib.h $(OutDir)\include
-copy .\zconf.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\zlib.h "$(OutDir)"\include
+copy .\zconf.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\README $(OutDir)\licenses\zlib.txt</Command>
     </PostBuildEvent>
@@ -830,11 +830,11 @@ copy ..\README $(OutDir)\licenses\zlib.txt</Command>
       <Command>if exist ..\zconf.h (
 del ..\zconf.h
 )
-if exist $(OutDir)\include\zlib.h (
-del $(OutDir)\include\zlib.h
+if exist "$(OutDir)"\include\zlib.h (
+del "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del "$(OutDir)"\include\zconf.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
@@ -842,11 +842,11 @@ del $(OutDir)\include\zconf.h
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\zlib.h (
-del /f /q $(OutDir)\include\zlib.h
+      <Command>if exist "$(OutDir)"\include\zlib.h (
+del /f /q "$(OutDir)"\include\zlib.h
 )
-if exist $(OutDir)\include\zconf.h (
-del /f /q $(OutDir)\include\zconf.h
+if exist "$(OutDir)"\include\zconf.h (
+del /f /q "$(OutDir)"\include\zconf.h
 )
 if exist $(OutDir)\licenses\zlib.txt (
 del /f /q $(OutDir)\licenses\zlib.txt
