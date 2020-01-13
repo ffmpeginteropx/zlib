@@ -2789,6 +2789,10 @@ del /f /q $(OutDir)\licenses\zlib.txt
     <ClCompile Include="..\compress.c" />
     <ClCompile Include="..\crc32.c" />
     <ClCompile Include="..\deflate.c" />
+    <ClCompile Include="..\gzclose.c" />
+    <ClCompile Include="..\gzlib.c" />
+    <ClCompile Include="..\gzread.c" />
+    <ClCompile Include="..\gzwrite.c" />
     <ClCompile Include="..\infback.c" />
     <ClCompile Include="..\inffast.c" />
     <ClCompile Include="..\inflate.c" />
